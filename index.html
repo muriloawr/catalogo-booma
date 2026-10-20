@@ -63,16 +63,8 @@
     padding: 18px 0;
     position: sticky; top: 0; z-index: 10;
   }
-  header .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+  header .wrap { display: flex; align-items: center; justify-content: center; }
   header .logo { height: 34px; width: auto; }
-  nav { display: flex; gap: 6px; flex-wrap: wrap; justify-content: flex-end; }
-  nav a {
-    color: #fff; text-decoration: none; font-size: 14px;
-    padding: 4px 10px; border: 1px solid rgba(255,255,255,.35);
-    transition: background .2s, color .2s;
-  }
-  nav a:hover { background: var(--ciano); color: var(--verde); border-color: var(--ciano); }
-  @media (max-width: 640px) { nav { display: none; } header .wrap { justify-content: center; } }
 
   /* hero */
   .hero { position: relative; background: var(--verde); }
@@ -115,11 +107,12 @@
 
   /* hero no desktop: texto à esquerda, foto à direita */
   @media (min-width: 900px) {
-    .hero { display: grid; grid-template-columns: 1fr 1fr; align-items: center; }
-    .hero-foto { order: 2; max-height: none; aspect-ratio: 4 / 5; }
+    .hero { display: grid; grid-template-columns: 1fr 1fr; align-items: stretch; }
+    .hero-foto { order: 2; aspect-ratio: auto; max-height: none; min-height: 640px; height: calc(100vh - 70px); }
+    .hero-texto { display: flex; flex-direction: column; justify-content: center; }
     .hero h1 { font-size: clamp(40px, 4.4vw, 72px); padding-left: 40px; top: 6%; }
     .hero-texto { margin-top: 0; padding: 64px 0; }
-    .hero-texto p { text-align: left; padding: 0 56px; }
+    .hero-texto p { text-align: left; padding: 0 56px; margin: 0; max-width: none; }
     .selos { margin: 48px 0 0; padding: 0 56px; }
   }
 
@@ -156,7 +149,7 @@
   #shamboo .produto-foto { background-image: url(img/shamboo.webp); }
   #shamboo h2, #shamboo .num, #shamboo .txt { background: var(--amarelo); }
   #shamboo .produto-texto { background: var(--coral); color: #fff; }
-  #shamboo .selo-natural svg { right: -18px; top: -34px; }
+  #shamboo .selo-natural svg { right: -8px; top: -34px; }
 
   #condicionador .produto-foto { background-image: url(img/condicionador.webp); background-position: center 70%; }
   #condicionador h2, #condicionador .num, #condicionador .txt { background: var(--rosa); }
@@ -169,7 +162,7 @@
 
   /* desktop: foto e texto lado a lado */
   @media (min-width: 900px) {
-    .produto { display: grid; grid-template-columns: 1.1fr 1fr; }
+    .produto { display: grid; grid-template-columns: 1fr 1fr; }
     .produto-foto { aspect-ratio: auto; min-height: 560px; }
     .produto-texto { display: flex; align-items: center; padding: 72px 0; }
     .produto-texto .wrap { padding: 0 56px; }
@@ -206,11 +199,6 @@
 <header>
   <div class="wrap">
     <a href="#topo" aria-label="Booma, início"><img class="logo" src="img/logo-branco.png" alt="booma" width="915" height="220"></a>
-    <nav aria-label="Produtos">
-      <a href="#shamboo">Shamboo 2 em 1</a>
-      <a href="#condicionador">Condicionador</a>
-      <a href="#leave-in">Leave in</a>
-    </nav>
   </div>
 </header>
 
