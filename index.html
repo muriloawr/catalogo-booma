@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Por que escolher Booma? | Catálogo</title>
+<meta name="description" content="Booma: marca idealizada de mãe para mãe, com ingredientes orgânicos e naturais para o cuidado do seu pequeno. Conheça o Shamboo 2 em 1, o Condicionador e o Leave in.">
+<meta name="theme-color" content="#264c3a">
+<meta property="og:title" content="Por que escolher Booma?">
+<meta property="og:description" content="A vida natural é mais colorida! Conheça a linha infantil Booma.">
+<meta property="og:image" content="https://catalogo.booma.com.br/img/hero.webp">
+<meta property="og:url" content="https://catalogo.booma.com.br/">
+<meta property="og:type" content="website">
+<link rel="icon" href="img/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --verde: #264c3a;
+    --ciano: #39d6e2;
+    --amarelo: #fcd06d;
+    --coral: #ff5252;
+    --rosa: #ff9fe8;
+    --verde-claro: #2dc973;
+    --creme: #fffcf8;
+    --mono: "DM Mono", ui-monospace, monospace;
+    --titulo: "Space Mono", ui-monospace, monospace;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--creme);
+    color: var(--verde);
+    font-family: var(--mono);
+    font-size: clamp(16px, 1.1vw + 12px, 21px);
+    line-height: 1.6;
+    letter-spacing: .02em;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: clip;
+  }
+  img { display: block; max-width: 100%; }
+  b, strong { font-family: var(--titulo); font-weight: 700; letter-spacing: 0; }
+
+  /* marca-texto: fundo colorido acompanhando cada linha */
+  .marca {
+    padding: .05em .3em;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+  }
+  .m-ciano { background: var(--ciano); }
+  .m-verde { background: var(--verde); color: #fff; }
+  .m-rosa { background: var(--rosa); }
+  .m-coral { background: var(--coral); color: #fff; }
+  .m-amarelo { background: var(--amarelo); }
+  .m-verde-claro { background: var(--verde-claro); }
+
+  .wrap { width: 100%; max-width: 1180px; margin: 0 auto; padding: 0 20px; }
+
+  /* topo */
+  header {
+    background: var(--verde);
+    padding: 18px 0;
+    position: sticky; top: 0; z-index: 10;
+  }
+  header .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+  header .logo { height: 34px; width: auto; }
+  nav { display: flex; gap: 6px; flex-wrap: wrap; justify-content: flex-end; }
+  nav a {
+    color: #fff; text-decoration: none; font-size: 14px;
+    padding: 4px 10px; border: 1px solid rgba(255,255,255,.35);
+    transition: background .2s, color .2s;
+  }
+  nav a:hover { background: var(--ciano); color: var(--verde); border-color: var(--ciano); }
+  @media (max-width: 640px) { nav { display: none; } header .wrap { justify-content: center; } }
+
+  /* hero */
+  .hero { position: relative; background: var(--verde); }
+  .hero-foto {
+    position: relative;
+    aspect-ratio: 4 / 5;
+    max-height: 88vh;
+    width: 100%;
+    background: url(img/hero.webp) center 30% / cover no-repeat;
+  }
+  .hero h1 {
+    position: absolute; top: 7%; left: 0; right: 0;
+    font-family: var(--titulo);
+    font-size: clamp(40px, 7vw, 92px);
+    line-height: 1.12;
+    text-transform: uppercase;
+  }
+  .hero h1 span { display: inline-block; background: var(--ciano); padding: 0 .18em; margin-bottom: .1em; }
+  .hero-texto {
+    position: relative;
+    margin-top: -64px;
+    padding-bottom: 56px;
+  }
+  .hero-texto p {
+    background: var(--verde); color: #fff;
+    max-width: 840px; margin: 0 auto;
+    padding: 28px 24px 0;
+    text-align: center;
+    line-height: 2.1;
+    font-size: clamp(17px, 1.3vw + 12px, 24px);
+  }
+  .hero-texto .marca { color: var(--verde); }
+
+  .selos {
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    gap: 12px; max-width: 760px; margin: 40px auto 0; padding: 0 20px;
+  }
+  .selos img { width: 100%; max-width: 150px; margin: 0 auto; }
+  @media (max-width: 480px) { .selos { grid-template-columns: repeat(2, 1fr); row-gap: 24px; } }
+
+  /* hero no desktop: texto à esquerda, foto à direita */
+  @media (min-width: 900px) {
+    .hero { display: grid; grid-template-columns: 1fr 1fr; align-items: center; }
+    .hero-foto { order: 2; max-height: none; aspect-ratio: 4 / 5; }
+    .hero h1 { font-size: clamp(40px, 4.4vw, 72px); padding-left: 40px; top: 6%; }
+    .hero-texto { margin-top: 0; padding: 64px 0; }
+    .hero-texto p { text-align: left; padding: 0 56px; }
+    .selos { margin: 48px 0 0; padding: 0 56px; }
+  }
+
+  /* produtos */
+  .produto { position: relative; }
+  .produto-foto {
+    position: relative;
+    aspect-ratio: 3 / 2;
+    background-size: cover; background-position: center;
+  }
+  .produto h2 {
+    position: absolute; left: 20px; bottom: 0;
+    font-family: var(--titulo);
+    font-size: clamp(32px, 5vw, 64px);
+    line-height: 1.25;
+    padding: .02em .3em;
+  }
+  .selo-natural {
+    position: absolute; right: 20px; top: -28px;
+    font-family: var(--titulo); text-transform: uppercase;
+    text-align: right; line-height: 1.05; z-index: 2;
+    isolation: isolate;
+  }
+  .selo-natural .num { display: inline-block; font-size: clamp(44px, 6vw, 80px); padding: 0 .12em; }
+  .selo-natural .txt { display: inline-block; font-size: clamp(28px, 3.6vw, 48px); padding: 0 .15em; margin-top: 6px; }
+  .selo-natural svg { position: absolute; width: clamp(80px, 10vw, 130px); height: auto; z-index: -1; }
+
+  .produto-texto { padding: 44px 0 64px; }
+  .produto-texto .wrap { max-width: 860px; }
+  .produto-texto p + p { margin-top: 28px; }
+  .como-usar { font-size: .88em; line-height: 1.95; }
+
+  /* cores por produto */
+  #shamboo .produto-foto { background-image: url(img/shamboo.webp); }
+  #shamboo h2, #shamboo .num, #shamboo .txt { background: var(--amarelo); }
+  #shamboo .produto-texto { background: var(--coral); color: #fff; }
+  #shamboo .selo-natural svg { right: -18px; top: -34px; }
+
+  #condicionador .produto-foto { background-image: url(img/condicionador.webp); background-position: center 70%; }
+  #condicionador h2, #condicionador .num, #condicionador .txt { background: var(--rosa); }
+  #condicionador .produto-texto { background: var(--amarelo); }
+  #condicionador .selo-natural svg { right: -10px; top: -46px; }
+
+  #leave-in .produto-foto { background-image: url(img/leave-in.webp); background-position: center 40%; }
+  #leave-in h2 { background: var(--coral); color: #fff; }
+  #leave-in .produto-texto { background: var(--rosa); }
+
+  /* desktop: foto e texto lado a lado */
+  @media (min-width: 900px) {
+    .produto { display: grid; grid-template-columns: 1.1fr 1fr; }
+    .produto-foto { aspect-ratio: auto; min-height: 560px; }
+    .produto-texto { display: flex; align-items: center; padding: 72px 0; }
+    .produto-texto .wrap { padding: 0 56px; }
+    .produto:nth-of-type(even) .produto-foto { order: 2; }
+    .selo-natural { top: 48px; }
+  }
+
+  /* rodapé */
+  footer { background: var(--creme); text-align: center; padding: 72px 20px 56px; }
+  footer .logo { width: min(320px, 70%); height: auto; margin: 0 auto; }
+  .slogan { font-family: var(--titulo); text-transform: uppercase; font-size: clamp(22px, 3vw, 34px); line-height: 1.2; margin-top: 4px; }
+  .slogan span { display: inline-block; padding: .1em .4em; }
+  .slogan span:first-child { background: var(--rosa); transform: rotate(-3deg); }
+  .slogan span:last-child { background: var(--verde-claro); margin-top: 4px; }
+  .acoes { margin-top: 44px; display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+  .btn {
+    font-family: var(--titulo); font-size: 15px; text-decoration: none;
+    padding: 14px 22px; border: 2px solid var(--verde); color: var(--verde);
+    transition: transform .15s, background .2s;
+  }
+  .btn:hover { transform: translateY(-2px); }
+  .btn.cheio { background: var(--verde); color: #fff; }
+  .btn.cheio:hover { background: var(--ciano); color: var(--verde); border-color: var(--ciano); }
+
+  /* entrada suave */
+  @media (prefers-reduced-motion: no-preference) {
+    .revela { opacity: 0; transform: translateY(24px); transition: opacity .7s ease, transform .7s ease; }
+    .revela.visivel { opacity: 1; transform: none; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a href="#topo" aria-label="Booma, início"><img class="logo" src="img/logo-branco.png" alt="booma" width="915" height="220"></a>
+    <nav aria-label="Produtos">
+      <a href="#shamboo">Shamboo 2 em 1</a>
+      <a href="#condicionador">Condicionador</a>
+      <a href="#leave-in">Leave in</a>
+    </nav>
+  </div>
+</header>
+
+<main id="topo">
+  <section class="hero">
+    <div class="hero-foto" role="img" aria-label="Mãe penteando o cabelo da filha sorridente">
+      <h1 class="wrap"><span>Por que</span><br><span>escolher</span><br><span>Booma?</span></h1>
+    </div>
+    <div class="hero-texto">
+      <p class="revela">Somos uma marca idealizada de <b>mãe para mãe</b>, com produtos que carregam ingredientes <b class="marca m-ciano">orgânicos, naturais e fórmulas que vão trazer a proteção e cuidado que seu pequeno precisa.</b></p>
+      <div class="selos revela">
+        <img src="img/selo-1.png" alt="Vegano">
+        <img src="img/selo-2.png" alt="Sem derivados de petróleo e corantes">
+        <img src="img/selo-3.png" alt="Livre de parabenos">
+        <img src="img/selo-4.png" alt="Livre de ftalatos">
+      </div>
+    </div>
+  </section>
+
+  <section class="produto" id="shamboo">
+    <div class="produto-foto" role="img" aria-label="Criança brincando com o frasco do Shamboo na espuma do banho">
+      <div class="selo-natural">
+        <svg viewBox="0 0 100 100" aria-hidden="true"><g stroke="#ff5252" stroke-width="7" stroke-linecap="square"><line x1="50" y1="8" x2="50" y2="92"/><line x1="8" y1="50" x2="92" y2="50"/><line x1="20" y1="20" x2="80" y2="80"/><line x1="80" y1="20" x2="20" y2="80"/></g></svg>
+        <span class="num">96%</span><br><span class="txt">Natural</span>
+      </div>
+      <h2>Shamboo 2 em 1</h2>
+    </div>
+    <div class="produto-texto">
+      <div class="wrap revela">
+        <p>Banho da cabeça aos pezinhos com um frasco só! Gel lavante que limpa cabelo e corpo com suavidade, com <b>pH entre 4,0 e 6,0</b>, e pode ser usado desde o primeiro dia de vida.</p>
+        <p class="como-usar"><span class="marca m-verde">Como usar: aplique no cabelo e no corpo molhados, massageie e enxágue.</span></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="produto" id="condicionador">
+    <div class="produto-foto" role="img" aria-label="Criança segurando quatro frascos do Condicionador Booma">
+      <div class="selo-natural">
+        <svg viewBox="0 0 100 60" aria-hidden="true"><g stroke="#fcd06d" stroke-width="7" stroke-linecap="square"><line x1="50" y1="4" x2="50" y2="56"/><line x1="8" y1="56" x2="92" y2="56"/><line x1="18" y1="20" x2="48" y2="54"/><line x1="82" y1="20" x2="52" y2="54"/></g></svg>
+        <span class="num">99,2%</span><br><span class="txt">Natural</span>
+      </div>
+      <h2>Condicionador</h2>
+    </div>
+    <div class="produto-texto">
+      <div class="wrap revela">
+        <p>Desembaraçar sem chororô? Pode contar com ele! Fórmula para <b>todos os tipos de cabelo</b>, que deixa os fios leves, macios e hidratados, sem frizz.</p>
+        <p class="como-usar"><span class="marca m-rosa">Como usar: aplique no cabelo e no corpo molhados, massageie e enxágue.</span></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="produto" id="leave-in">
+    <div class="produto-foto" role="img" aria-label="Mão borrifando o Leave in Booma em cabelo cacheado">
+      <h2>Leave in</h2>
+    </div>
+    <div class="produto-texto">
+      <div class="wrap revela">
+        <p>O ajudante oficial da hora de pentear! <b>Multifuncional, pode ser usado no cabelo seco ou molhado para desembaraçar</b>, deixar os fios leves e hidratados e ainda proteger do sol e do secador.</p>
+        <p class="como-usar"><span class="marca m-coral">Como usar: borrife nos cabelos secos ou úmidos, espalhe com os dedos ou o pente e não enxágue.</span></p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <img class="logo" src="img/logo-verde.png" alt="booma" width="915" height="220">
+  <p class="slogan"><span>A vida natural é</span><br><span>mais colorida!</span></p>
+  <div class="acoes">
+    <a class="btn cheio" href="https://booma.com.br">Comprar na loja</a>
+    <a class="btn" href="catalogo-booma.pdf" download>Baixar PDF</a>
+  </div>
+</footer>
+
+<script>
+  const els = document.querySelectorAll('.revela');
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visivel'); io.unobserve(e.target); } });
+    }, { threshold: .15 });
+    els.forEach(el => io.observe(el));
+  } else {
+    els.forEach(el => el.classList.add('visivel'));
+  }
+</script>
+</body>
+</html>
